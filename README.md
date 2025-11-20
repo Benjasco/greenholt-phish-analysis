@@ -8,9 +8,9 @@ Perform a phishing investigation on a malicious email sample and identify indica
 ## Key Tasks Performed
 
 ### Extracted full email headers  
-Analyzed the `.eml` headers using Google Admin Toolbox Message Header Analyzer and mailheader.org.
+Analyzed the `.eml` headers using Google Admin Toolbox Message Header Analyzer and Microsoft Header Analyzer.
 
-![Google Admin Toolbox Header](images/google-admin-toolbox-message-header.png)
+![Microsoft Header Analyzer (MHA)](images/mha.png)
 
 ---
 
@@ -43,6 +43,8 @@ The attachment hash was calculated using `sha256sum` and submitted to VirusTotal
 
 ![ripmime and sha256](images/ripmime-sha256-file.png)
 
+![Attachments](images/attachments.png)
+
 ![VirusTotal Report](images/virustotal-report.png)
 
 ---
@@ -61,7 +63,7 @@ The attachment hash was calculated using `sha256sum` and submitted to VirusTotal
 - file  
 - VirusTotal  
 - ipinfo.io  
-- mailheader.org  
+- Microsoft Header Analyzer 
 - Google Admin Toolbox Header Analyzer  
 
 ---
