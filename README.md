@@ -1,7 +1,9 @@
 # Phishing Email Analysis — The Greenholt Phish Challenge (TryHackMe)
 
+This project documents a full phishing investigation performed on the **Greenholt Phish** email sample from TryHackMe.
+
 ## Objective  
-Perform a phishing investigation on a malicious email sample and identify indicators of compromise (IOCs) and malicious attachments.
+Perform a phishing investigation on a malicious email sample to identify indicators of compromise (IOCs) and malicious attachments.
 
 ---
 
@@ -56,6 +58,18 @@ The attachment hash was calculated using `sha256sum` and submitted to VirusTotal
 
 ---
 
+## Indicators of Compromise (IOCs)
+
+| Type               | Value                                                                 | Source / Evidence                     |
+|--------------------|-----------------------------------------------------------------------|----------------------------------------|
+| File Hash (SHA-256)| `2e91c533615a9bb8929ac4bb76707b2444597ce063d84a4b33525e25074fff3f`    | Calculated using `sha256sum`           |
+| Attachment Name    | `SWT_#09674321____PDF__.CAB`                                          | Extracted using ripmime                |
+| SPF Status         | `fail`                                                                | Google Admin Toolbox                   |
+| DMARC Status       | `unknown`                                                             | Google Admin Toolbox                   |
+| VirusTotal Verdict | `malicious`                                                           | VirusTotal report screenshot           |
+
+---
+
 ## Tools Used
 
 - ripmime  
@@ -70,4 +84,4 @@ The attachment hash was calculated using `sha256sum` and submitted to VirusTotal
 
 ## Conclusion
 
-Determined through header analysis, authentication checks, Threat Intelligence lookups, and attachment triage that the email was a phishing attack with a malicious payload, designed to compromise the recipient’s system and/or credentials.
+SPF and DMARC checks failed (indicating sender spoofing), the originating IP is unrelated to the claimed sender, and the attachment's SHA-256 was flagged by Threat Intelligence — together confirming a phishing attack designed to compromise the recipient’s system and/or credentials.
