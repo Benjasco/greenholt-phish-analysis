@@ -1,5 +1,10 @@
 # Phishing Email Analysis — The Greenholt Phish Challenge (TryHackMe)
 
+![Category](https://img.shields.io/badge/Category-Phishing_Analysis-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![TryHackMe](https://img.shields.io/badge/TryHackMe-Greenholt_Phish-red)
+
+
 This project documents a full phishing investigation performed on the **Greenholt Phish** email sample from TryHackMe.
 
 ## Objective  
